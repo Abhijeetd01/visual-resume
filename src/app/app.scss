@@ -1,161 +1,54 @@
-:root {
-  --bright-blue: oklch(51% 0.274 263.83);
-  --electric-violet: oklch(53% 0.28 296.97);
-  --french-violet: oklch(47.66% 0.246 305.88);
-  --vivid-pink: oklch(69% 0.277 332.77);
-  --hot-red: oklch(61.42% 0.238 15.34);
-  --orange-red: oklch(63.32% 0.24 31.68);
-  --gray-900: oklch(19.37% 0.006 300.98);
-  --gray-700: oklch(36.98% 0.014 302.71);
-  --gray-400: oklch(70.9% 0.015 304.04);
-  --gradient-vertical: linear-gradient(180deg, var(--orange-red) 0%, var(--vivid-pink) 50%, var(--electric-violet) 100%);
-  --gradient-horizontal: linear-gradient(90deg, var(--orange-red) 0%, var(--vivid-pink) 50%, var(--electric-violet) 100%);
-  --pill-accent: var(--bright-blue);
-  font-family: "Inter", sans-serif;
-  box-sizing: border-box;
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #dbe6f1);
+  color:#333;
+  line-height:1.6;
+  overflow-x:hidden;
 }
 
-* { box-sizing: inherit; margin: 0; padding: 0; }
+main { max-width: 1000px; margin: auto; padding: 2rem; }
 
-body, html {
-  width: 100%;
-  height: 100%;
+header { text-align:center; margin-bottom:2rem; animation: fadeIn 1.5s ease; }
+header h1 { font-size:2.8rem; color:#0077b5; animation: slideDown 1.5s ease; }
+header h2 { font-size:1.3rem; color:#222; margin-top:0.3rem; }
+.contact-info {
+  margin-top:0.8rem; font-size:0.9rem; color:#555; animation: fadeIn 2s ease;
+}
+.contact-info a { color:#ff4b2b; text-decoration:none; margin:0 0.5rem; transition: color 0.3s; }
+.contact-info a:hover { color:#ff416c; }
+
+.download-btn {
+  display:inline-block; margin-top:1rem; padding:0.7rem 1.5rem;
+  background:#ff416c; color:#fff; border:none; border-radius:5px; cursor:pointer;
+  text-decoration:none; font-weight:bold; transition: all 0.3s;
+}
+.download-btn:hover { background:#ff4b2b; transform: scale(1.05); }
+
+section {
+  background:#fff; padding:1.8rem; margin-bottom:1.5rem;
+  border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);
+  animation: fadeInUp 1s ease forwards; opacity:0;
+}
+section h3 {
+  margin-bottom:1rem; color:#ff416c;
+  border-bottom:2px solid #ff4b2b; display:inline-block; padding-bottom:0.3rem;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1rem;
-  flex-direction: column;
-  gap: 2rem;
+.skills, .experience, .certifications { display:flex; flex-wrap:wrap; gap:1rem; }
+.skill, .job, .cert {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  padding:0.7rem 1rem; border-radius:8px; flex:1; min-width:200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill:hover, .job:hover, .cert:hover { transform: translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+
+.job p { margin-top:0.5rem; font-size:0.9rem; }
+@media(max-width:700px){
+  .skills, .experience, .certifications { flex-direction:column; }
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 900px;
-  width: 100%;
-  gap: 2rem;
-}
-
-.left-side {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.left-side h1, .left-side h2 {
-  color: var(--gray-900);
-  margin-top: 1rem;
-}
-
-.left-side p {
-  color: var(--gray-700);
-  margin-top: 1rem;
-}
-
-.angular-logo {
-  max-width: 200px;
-  width: 100%;
-  height: auto;
-}
-
-.divider {
-  width: 2px;
-  background: var(--gradient-vertical);
-  flex: 0 0 2px;
-  margin-inline: 1rem;
-}
-
-.right-side {
-  flex: 1 1 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-links a svg path {
-  fill: var(--gray-400);
-  transition: fill 0.3s;
-}
-
-.social-links a:hover svg path {
-  fill: var(--gray-900);
-}
-
-/* Resume Card Styles */
-.resume-card {
-  border: 2px solid var(--gray-400);
-  border-radius: 12px;
-  padding: 1rem;
-  max-width: 700px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.resume-card h2 {
-  color: var(--gray-900);
-}
-
-.iframe-container {
-  width: 100%;
-  height: 500px;
-  border: 1px solid var(--gray-400);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.iframe-container iframe {
-  width: 100%;
-  height: 100%;
-  transform-origin: top left;
-}
-
-.controls {
-  display: flex;
-  gap: 1rem;
-}
-
-.controls button {
-  padding: 0.5rem 1rem;
-  background: var(--bright-blue);
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.controls button:hover {
-  background: var(--electric-violet);
-}
-
-@media (max-width: 650px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .divider {
-    width: 80%;
-    height: 2px;
-    margin: 1rem 0;
-    background: var(--gradient-horizontal);
-  }
-}
+/* Animations */
+@keyframes fadeIn { from {opacity:0} to {opacity:1} }
+@keyframes fadeInUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform:translateY(0);} }
+@keyframes slideDown { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform:translateY(0);} }
