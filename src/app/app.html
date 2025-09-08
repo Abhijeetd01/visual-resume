@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <ng-container>
+  <ng-container *ngIf="maintainence">
     <main>
       <!-- Header -->
       <header>
@@ -128,5 +128,6 @@
       </section>
     </main>
   </ng-container>
+  <h1>oops..Website under maintainence</h1>
 </body>
 </html>
