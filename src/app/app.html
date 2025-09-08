@@ -8,126 +8,38 @@
 </head>
 
 <body>
-  <ng-container *ngIf="maintainence">
+  <!-- *ngIf="maintainence" -->
+  <ng-container>
     <main>
       <!-- Header -->
       <header>
-        <h1>Abhijeet Das</h1>
-        <h2>Front-End Specialist | Angular | Technical Lead</h2>
-        <div class="contact-info">
-          Bangalore, Karnataka, India | +91-8809406316 |
-          <a href="mailto:abhijeetd720@gmail.com">abhijeetd720@gmail.com</a> |
-          <a href="https://www.linkedin.com/in/0001abhijeet" target="_blank">LinkedIn</a>
-        </div>
-        <a class="download-btn" href="assets/Resume.pdf" download>Download Resume</a>
+        <app-header></app-header>
       </header>
 
       <!-- About Me -->
-      <section>
-        <h3>About Me</h3>
-        <p>Experienced front-end developer with deep expertise in Angular (v2–17), building enterprise-grade UI
-          solutions with state management, modern design systems, and REST API integrations. Recognized for delivering
-          ADA-compliant, secure, and scalable front-end platforms using Agile methodologies.</p>
-      </section>
-
+      <app-about></app-about>
       <!-- Technical Skills -->
       <section>
-        <h3>Technical Skills</h3>
-        <div class="skills">
-          <div class="skill">Angular (v2–17)</div>
-          <div class="skill">TypeScript</div>
-          <div class="skill">HTML5 & SCSS</div>
-          <div class="skill">Bootstrap</div>
-          <div class="skill">Angular Material</div>
-          <div class="skill">Prime NG</div>
-          <div class="skill">Ag-grid</div>
-          <div class="skill">RxJS</div>
-          <div class="skill">VS Code</div>
-          <div class="skill">Git & Bitbucket</div>
-          <div class="skill">JIRA</div>
-          <div class="skill">IntelliJ IDEA</div>
-          <div class="skill">Figma</div>
-          <div class="skill">Python</div>
-          <div class="skill">Jenkins & Kubernetes</div>
-          <div class="skill">GitLab & MySQL</div>
-          <div class="skill">UX/UI Design & Wireframes</div>
-          <div class="skill">ADA Compliance & Agile</div>
-          <div class="skill">Core Java</div>
-          <div class="skill">Design Thinking</div>
-        </div>
+        <app-skills></app-skills>
       </section>
 
       <!-- Professional Experience -->
       <section>
-        <h3>Professional Experience</h3>
-        <div class="experience">
-          <div class="job">
-            <strong>Accenture, Bangalore</strong><br />
-            <small>Technical Lead / Front-End Specialist | July 2025 – Present</small>
-            <p>
-              Leading front-end architecture and UI development for enterprise Angular applications.<br />
-              Mentoring developers and enforcing code quality, performance, and accessibility standards.<br />
-              Implementing modern design systems, reusable components, and advanced state management.<br />
-              Collaborating with Product Owners and UX/UI designers to deliver scalable solutions across web platforms.
-            </p>
-          </div>
-
-          <div class="job">
-            <strong>Tata Consultancy Services (TCS BaNCS), Bangalore</strong><br />
-            <small>Software Engineer II – Client: Bank of America | June 2022 – August 2025</small>
-            <p>
-              Upgraded legacy Angular codebases to Angular 17 with improved modularity, security, and performance.<br />
-              Implemented state management using RxJS for reactive forms and event streams across core banking
-              modules.<br />
-              Developed scalable Ag-grid tables for high-volume risk and analytics data.<br />
-              Delivered fully ADA-compliant interfaces across platforms like RAP, RISK ID, and RIRA.<br />
-              Led UI design and development for the RIRA platform, receiving accolades from Bank of America leadership
-              and Product Owners.
-            </p>
-          </div>
-
-          <div class="job">
-            <strong>Infosys Ltd, Bangalore</strong><br />
-            <small>Software Engineering Specialist – Client: British Telecom | Oct 2019 – Jun 2022</small>
-            <p>
-              Developed cloud-native UI modules for Infosys Wingspan & LEX using Angular 10+, RxJS, and Bootstrap.<br />
-              Integrated REST APIs with observable patterns and reactive forms using RxJS.<br />
-              Built reusable UI components and collaborated with backend and DevOps teams to improve telecom inventory
-              management applications.<br />
-              Earned recognitions in internal open-source contributions and R&D initiatives.
-            </p>
-          </div>
-
-          <div class="job">
-            <strong>Infosys Ltd, Mysore</strong><br />
-            <small>Winter Intern – Software Engineer Trainee | Dec 2018 – May 2019</small>
-            <p>
-              Designed a Python-based NLP tool to parse multi-format resumes for internal recruitment analytics.<br />
-              Earned recognition from Infosys management for creativity and independent project execution.
-            </p>
-          </div>
-        </div>
+        <app-experience></app-experience>
       </section>
 
       <!-- Education -->
       <section>
-        <h3>Education</h3>
-        <p>B. Tech – Computer Science & Engineering, Haldia Institute of Technology (2015–2019) | CGPA: 8.07</p>
+        <app-education></app-education>
       </section>
 
       <!-- Certifications & Recognitions -->
       <section>
-        <h3>Certifications & Recognitions</h3>
-        <div class="certifications">
-          <div class="cert">TCS Performance Band A – FY 2023–24</div>
-          <div class="cert">Infosys Lex Gold Badge – Learning Champion</div>
-          <div class="cert">Global Agile Developer Certification – Infosys</div>
-          <div class="cert">Best Performer Award – Corporate Strategy, Infosys</div>
-          <div class="cert">Service & Commitment Award – TCS</div> <!-- New award added -->
-        </div>
+        <app-cert-recognition></app-cert-recognition>
       </section>
     </main>
   </ng-container>
-  <h1>oops..Website under maintainence</h1>
+  <!-- <h1>oops..Website under maintainence</h1> -->
 </body>
+
 </html>
