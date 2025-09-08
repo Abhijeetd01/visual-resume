@@ -22,5 +22,5 @@ import { Skills } from './skills/skills';
 })
 export class App {
   protected readonly title = signal('Abhijeet');
-  public maintainence: boolean = true; //maintainence flag
+  public maintainence: boolean = false; //maintainence flag
 }
