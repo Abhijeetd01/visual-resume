@@ -5,9 +5,9 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('Abhijeet');
-  public maintainence:boolean=true; //maintainence flag
+  public maintainence: boolean = true; //maintainence flag
 }

@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-cert-recognition',
   imports: [],
   templateUrl: './certand-recognition.html',
-  styleUrl: './certand-recognition.scss'
+  styleUrl: './certand-recognition.scss',
 })
-export class CertandRecognition {
-
-}
+export class CertandRecognition {}
