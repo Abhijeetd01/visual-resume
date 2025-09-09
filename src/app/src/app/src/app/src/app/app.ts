@@ -9,14 +9,7 @@ import { Skills } from './skills/skills';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,
-    Header,
-    About,
-    CertandRecognition,
-    Education,
-    Experience,
-    Skills
-  ],
+  imports: [RouterOutlet, Header, About, CertandRecognition, Education, Experience, Skills],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
